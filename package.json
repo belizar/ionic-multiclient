@@ -10,7 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "resources": "cordova-res ios && cordova-res android"
+    "resources": "cordova-res ios && cordova-res android",
+    "provide:client:cat": "node scripts/provide-client.js --client cat",
+    "provide:client:dog": "node scripts/provide-client.js --client dog",
+    "serve:cat": "npm run provide:client:cat && ionic serve",
+    "serve:dog": "npm run provide:client:dog && ionic serve"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +53,7 @@
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-res": "^0.13.0",
+    "fs-extra": "^9.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
